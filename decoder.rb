@@ -1,5 +1,4 @@
 print 'Enter your morse code: '
-
 morse_str = gets.chomp
 
 def decode_char(character)
@@ -15,20 +14,20 @@ def decode_char(character)
   dictionary.key(character) || ' '
 end
 
-def decode_word(morse_text)
+def decode_word(morse_word)
   text = ''
-    morse_text.split.each do |char|
-      text += decode_char(char)
-    end
+  morse_word.split.each do |char|
+    text += decode_char(char)
+  end
   text
 end
 
-def result(morse_result)
-  result = []
-  morse_result.split(' ').each do |word|
-    result.push(decode_word)
+def decode_result(morse_result)
+  decode_result = []
+  morse_result.split.each do |text|
+    decode_result.push(text)
   end
-  result.join(' ')
+  decode_result.join(' ')
 end
 
-puts "Your message is: #{result(morse_str)}"
+puts "Your message is: #{decode_result(morse_str)}"
