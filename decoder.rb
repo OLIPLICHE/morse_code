@@ -12,21 +12,22 @@ dictionary = {
 }
 
 def decode_char(character)
-    return $dictionary.key(character) || ' '
-end 
+  return $dictionary.key(character) || ' '
+end
 
 def decode_word(morse_text)
-    text = ''
+  text = ''
     morse_text.split.each do |char| text += decode_char(char)
     end
     text
 end
 
 def result(morse_result)
-    result = []
-    morse_result.split(' ').each do |text| result.push(decode_word)
+  result = []
+    morse_result.split(' ').each do |text|
+      result.push(decode_word)
     end
-    result.join(' ')
-end    
+  result.join(' ')
+end
 
-puts 'Your message is: #{decode_char(morse_str)}'
+puts "Your message is: #{result(morse_str)}"
