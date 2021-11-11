@@ -1,57 +1,48 @@
-require 'set'
+print "Enter your morse code: "
 
-dictionary = Hash.new
+morse_str = gets.chomp
 
-dictionary[" "] = " " 
-dictionary["A"] = ".-" 
-dictionary["B"] = "-..." 
-dictionary["C"] = "-.-." 
-dictionary["D"] = "-.." 
-dictionary["E"] = "." 
-dictionary["F"] = "..-." 
-dictionary["G"] = "--." 
-dictionary["H"] = "...." 
-dictionary["I"] = ".." 
-dictionary["J"] = ".---" 
-dictionary["K"] = "-.-" 
-dictionary["L"] = ".-.." 
-dictionary["M"] = "--" 
-dictionary["N"] = "-." 
-dictionary["O"] = "---" 
-dictionary["P"] = ".--." 
-dictionary["Q"] = "--.-" 
-dictionary["R"] = ".-." 
-dictionary["S"] = "..." 
-dictionary["T"] = "-" 
-dictionary["U"] = "..-" 
-dictionary["V"] = "...-" 
-dictionary["W"] = ".--" 
-dictionary["X"] = "-..-" 
-dictionary["Y"] = "-.--" 
-dictionary["Z"] = "--.." 
+dictionary {
+    "A" => ".-",
+    "B" => "-...",
+    "C" => "-.-.",
+    "D" => "-..",
+    "E" => ".",
+    "F" => "..-.",
+    "G" => "--.",
+    "H" => "....",
+    "I" => "..",
+    "J" => ".---",
+    "K" => "-.-",
+    "L" => ".-..",
+    "M" => "--",
+    "N" => "-.",
+    "O" => "---",
+    "P" => ".--.",
+    "Q" => "--.-",
+    "R" => ".-.",
+    "S" => "...",
+    "T" => "-",
+    "U" => "..-",
+    "V" => "...-",
+    "W" => ".--",
+    "X" => "-..-",
+    "Y" => "-.--",
+    "Z" => "--.."
+    "1" => ".----" 
+    "2" => "..---" 
+    "3" => "...--" 
+    "4" => "....-" 
+    "5" => "....." 
+    "6" => "-...." 
+    "7" => "--..." 
+    "8" => "---.." 
+    "9" => "----." 
+    "0" => "-----"
+}
 
-dictionary["1"] = ".----" 
-dictionary["2"] = "..---" 
-dictionary["3"] = "...--" 
-dictionary["4"] = "....-" 
-dictionary["5"] = "....." 
-dictionary["6"] = "-...." 
-dictionary["7"] = "--..." 
-dictionary["8"] = "---.." 
-dictionary["9"] = "----." 
-dictionary["0"] = "-----"
+def decode_char(character)
+    return $dictionary.key(character) || " "
+end 
 
-
-text = "this is morse code"
-puts "text: #{text}"
-
-puts 
-
-morse = ""
-
-for c in text.split("")
-
-    morse += dictionary[ c.upcase ].to_s + " "
-end
-
-puts "morse: #{morse}"
+puts "Your message is: #{decode_char(morse_str)}"
