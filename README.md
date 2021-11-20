@@ -12,7 +12,13 @@ During your vacation at the seaside, time after time you find old bottles with p
 👤 **Olipliche Mavoungou Paka**
 - GitHub: [https://github.com/OLIPLICHE)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/olipliche/)
+- Twitter: [@olipliche1](https://twitter.com/olipliche1)
 
+👤 **Yannick-Noel AKA**
+- Location: Côte d'Ivoire
+- GitHub: [@codecaiine](https://github.com/codecaiine)
+- Twitter: [@yannicknaka](https://twitter.com/yannicknaka)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yannick-no%C3%ABl-aka/)
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
